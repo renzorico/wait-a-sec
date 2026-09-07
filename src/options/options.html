@@ -7,7 +7,65 @@
     <link rel="stylesheet" href="options.css" />
   </head>
   <body>
-    <div id="root"><!-- options UI — coming soon --></div>
+    <div class="page">
+
+      <header class="header">
+        <div class="header-left">
+          <h1 class="logo">wait a sec</h1>
+          <p class="tagline">friction before distraction</p>
+        </div>
+        <label class="global-toggle" title="Enable / disable extension globally">
+          <input type="checkbox" id="global-enabled" />
+          <span class="toggle-track">
+            <span class="toggle-thumb"></span>
+          </span>
+          <span class="toggle-label" id="global-label">enabled</span>
+        </label>
+      </header>
+
+      <main class="main">
+
+        <!-- Add rule -->
+        <section class="add-section">
+          <form id="add-form" class="add-form" autocomplete="off">
+            <input
+              id="input-domain"
+              class="input-domain"
+              type="text"
+              placeholder="twitter.com"
+              spellcheck="false"
+              required
+            />
+            <div class="delay-wrap">
+              <input
+                id="input-delay"
+                class="input-delay"
+                type="number"
+                min="1"
+                max="120"
+                value="10"
+                required
+              />
+              <span class="delay-unit">s</span>
+            </div>
+            <button type="submit" class="btn-add">Add site</button>
+          </form>
+          <p class="add-hint" id="add-error" aria-live="polite"></p>
+        </section>
+
+        <!-- Rules list -->
+        <section class="rules-section">
+          <ul class="rules-list" id="rules-list">
+            <!-- populated by JS -->
+          </ul>
+          <div class="empty-state" id="empty-state" hidden>
+            <p>No sites added yet.</p>
+            <p class="empty-hint">Add a domain above to get started.</p>
+          </div>
+        </section>
+
+      </main>
+    </div>
     <script type="module" src="options.ts"></script>
   </body>
 </html>
