@@ -3,6 +3,7 @@
   "name": "Wait a Sec",
   "version": "0.1.0",
   "description": "Adds intentional friction before opening distracting websites — gradual unblur with usage tracking.",
+  "homepage_url": "https://github.com/renzorico/wait-a-sec",
   "permissions": [
     "storage",
     "webNavigation",
