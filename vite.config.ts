@@ -1,9 +1,12 @@
 import { defineConfig } from "vite";
 import webExtension from "vite-plugin-web-extension";
+import path from "path";
 
 export default defineConfig(({ mode }) => ({
+  // Set root to src/ so manifest-relative paths resolve correctly
+  root: path.resolve(__dirname, "src"),
   build: {
-    outDir: "dist",
+    outDir: path.resolve(__dirname, "dist"),
     emptyOutDir: true,
     sourcemap: mode === "development",
   },
