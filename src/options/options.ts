@@ -70,10 +70,10 @@ function buildRuleItem(rule: SiteRule): HTMLLIElement {
     <div class="rule-domain">${escapeHtml(rule.pattern)}</div>
     <div class="rule-stats">
       ${stat ? `
-        <span>${stat.attempts} attempt${stat.attempts !== 1 ? "s" : ""}</span>
-        <span>${stat.proceeded} proceeded</span>
-        <span>${stat.skipped} skipped</span>
-      ` : `<span>no data yet</span>`}
+        <span class="rule-stat-pill attempts">${stat.attempts} attempt${stat.attempts !== 1 ? "s" : ""}</span>
+        <span class="rule-stat-pill proceeded">${stat.proceeded} continued</span>
+        <span class="rule-stat-pill skipped">${stat.skipped} turned back</span>
+      ` : `<span class="rule-stat-pill no-data">no data yet</span>`}
     </div>
     <div class="rule-controls">
       <label class="rule-delay-wrap" title="Delay in seconds">

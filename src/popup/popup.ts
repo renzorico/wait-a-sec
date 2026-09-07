@@ -59,8 +59,8 @@ function renderSites(rules: SiteRule[], stats: Record<string, SiteStat>): void {
     li.className = `site-item${rule.enabled ? "" : " disabled"}`;
 
     const statsText = stat
-      ? `${stat.attempts}× · ${stat.proceeded} in · ${stat.skipped} out`
-      : "no data";
+      ? `${stat.proceeded} in · ${stat.skipped} back`
+      : "new";
 
     li.innerHTML = `
       <span class="site-domain">${escapeHtml(rule.pattern)}</span>

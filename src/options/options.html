@@ -12,7 +12,7 @@
       <header class="header">
         <div class="header-left">
           <h1 class="logo">wait a sec</h1>
-          <p class="tagline">friction before distraction</p>
+          <p class="tagline">a moment of intention before distraction</p>
         </div>
         <label class="global-toggle" title="Enable / disable extension globally">
           <input type="checkbox" id="global-enabled" />
@@ -27,12 +27,13 @@
 
         <!-- Add rule -->
         <section class="add-section">
+          <h2 class="section-label">Add a site</h2>
           <form id="add-form" class="add-form" autocomplete="off">
             <input
               id="input-domain"
               class="input-domain"
               type="text"
-              placeholder="twitter.com"
+              placeholder="e.g. twitter.com"
               spellcheck="false"
               required
             />
@@ -46,21 +47,28 @@
                 value="10"
                 required
               />
-              <span class="delay-unit">s</span>
+              <span class="delay-unit">sec</span>
             </div>
-            <button type="submit" class="btn-add">Add site</button>
+            <button type="submit" class="btn-add">Add</button>
           </form>
           <p class="add-hint" id="add-error" aria-live="polite"></p>
         </section>
 
         <!-- Rules list -->
         <section class="rules-section">
+          <h2 class="section-label" id="rules-label">Your sites</h2>
           <ul class="rules-list" id="rules-list">
             <!-- populated by JS -->
           </ul>
           <div class="empty-state" id="empty-state" hidden>
-            <p>No sites added yet.</p>
-            <p class="empty-hint">Add a domain above to get started.</p>
+            <div class="empty-icon">
+              <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+                <circle cx="20" cy="20" r="18" stroke="currentColor" stroke-width="1.5" stroke-dasharray="3 4" />
+                <path d="M14 20h12M20 14v12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+              </svg>
+            </div>
+            <p class="empty-title">No sites yet</p>
+            <p class="empty-hint">Add a domain above and choose how long to pause before it loads.</p>
           </div>
         </section>
 
