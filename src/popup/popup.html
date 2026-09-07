@@ -7,7 +7,48 @@
     <link rel="stylesheet" href="popup.css" />
   </head>
   <body>
-    <div id="root"><!-- popup UI — coming soon --></div>
+    <div class="popup">
+
+      <header class="header">
+        <span class="logo">wait a sec</span>
+        <label class="toggle" title="Enable / disable globally">
+          <input type="checkbox" id="global-enabled" />
+          <span class="toggle-track"><span class="toggle-thumb"></span></span>
+        </label>
+      </header>
+
+      <!-- Aggregate stats -->
+      <section class="totals" id="totals">
+        <div class="total-item">
+          <span class="total-value" id="total-attempts">—</span>
+          <span class="total-label">attempts</span>
+        </div>
+        <div class="total-divider"></div>
+        <div class="total-item">
+          <span class="total-value" id="total-proceeded">—</span>
+          <span class="total-label">proceeded</span>
+        </div>
+        <div class="total-divider"></div>
+        <div class="total-item">
+          <span class="total-value" id="total-skipped">—</span>
+          <span class="total-label">skipped</span>
+        </div>
+      </section>
+
+      <!-- Per-site list -->
+      <ul class="site-list" id="site-list">
+        <!-- populated by JS -->
+      </ul>
+
+      <div class="empty" id="empty" hidden>
+        <p>No sites tracked yet.</p>
+      </div>
+
+      <footer class="footer">
+        <button class="btn-settings" id="btn-settings">Settings</button>
+      </footer>
+
+    </div>
     <script type="module" src="popup.ts"></script>
   </body>
 </html>
