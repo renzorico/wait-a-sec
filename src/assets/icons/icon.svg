@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
+  <!-- Background -->
+  <rect width="128" height="128" rx="28" fill="#0d0d0d"/>
+
+  <!-- Hourglass shape: two triangles meeting at center -->
+  <!-- Top triangle (filled, draining) -->
+  <path d="M36 26 L92 26 L64 62 Z" fill="rgba(255,255,255,0.9)"/>
+  <!-- Bottom triangle (outline only, filling up) -->
+  <path d="M36 102 L92 102 L64 66 Z" fill="rgba(255,255,255,0.25)"/>
+
+  <!-- Top cap bar -->
+  <rect x="32" y="22" width="64" height="6" rx="3" fill="rgba(255,255,255,0.9)"/>
+  <!-- Bottom cap bar -->
+  <rect x="32" y="100" width="64" height="6" rx="3" fill="rgba(255,255,255,0.9)"/>
+</svg>

@@ -5,6 +5,8 @@ import path from "path";
 export default defineConfig(({ mode }) => ({
   // Set root to src/ so manifest-relative paths resolve correctly
   root: path.resolve(__dirname, "src"),
+  // publicDir copies static assets (icons, etc.) straight into dist/
+  publicDir: path.resolve(__dirname, "public"),
   build: {
     outDir: path.resolve(__dirname, "dist"),
     emptyOutDir: true,
